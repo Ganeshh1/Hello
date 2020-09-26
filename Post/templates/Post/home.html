@@ -1,0 +1,22 @@
+{% extends "Post/base.html" %}
+{% block content %}
+
+
+
+{% for i in posts %}
+<article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ i.name}}</a>
+        <small class="text-muted">{{ i.age }}</small>
+      </div>
+      <h2><a class="article-title" href="#">{{i.birthdate}}</a></h2>
+      <p class="article-content">{{i.phone}}</p>
+      <p class="article-content">{{i.degree}}</p>
+      <p class="article-content"><img src="{{ i.image.url }}"  width="30%" height="30%" alt="H"></p>
+      
+    </div>
+  </article>
+  {% endfor %}
+{% endblock content %}
+
